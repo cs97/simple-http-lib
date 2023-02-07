@@ -8,10 +8,10 @@ use std::{
 
 
 pub struct RequestObj {
-		request: String,
-		path: String,
-		pass: String,
-		length: String,
+		pub request: String,
+		pub path: String,
+		pub pass: String,
+		pub length: String,
 	}
 
 
@@ -69,7 +69,7 @@ pub fn handle_get(mut path: &str, mut stream: TcpStream) {
     }
 }
 
-fn handle_put(path: &str, content_length: &str, mut stream: TcpStream) {
+pub fn handle_put(path: &str, content_length: &str, mut stream: TcpStream) {
 
     let length = content_length.parse::<usize>().unwrap();
 
