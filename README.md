@@ -16,14 +16,15 @@ use simple_http_lib::*;
 
 
 fn main() {
+
     let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
-    	//let listener = TcpListener::bind("192.168.178.53:7878").unwrap();
+	
     	for stream in listener.incoming() {
     	    let mut stream = stream.unwrap();
 
 			let request_obj: RequestObj = return_request_obj(&stream);
 
-		  // Example authentication. Please use a secure authentication method
+			// Example authentication. Please use a secure authentication method
 			/*
     		let pass = "none";
 		    if request_obj.pass.to_string() != pass {
