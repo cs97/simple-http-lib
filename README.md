@@ -9,7 +9,7 @@ Cargo.toml
 simple-http-lib = { git = "https://github.com/cs97/simple-http-lib" }
 ```
 main.rs
-```
+```rust
 use std::net::TcpListener;
 use std::io::Write;
 use simple_http_lib::*;
